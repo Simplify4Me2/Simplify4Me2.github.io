@@ -9,6 +9,7 @@ function App() {
         <a href="/qr-code-component">QR Code Component</a>
         <br />
         <a href="/social-media-dashboard">Social Media Dashboard</a>
+        <h2 className="text-3xl font-bold underline">Test</h2>
     </>
   )
 }
