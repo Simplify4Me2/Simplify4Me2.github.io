@@ -1,3 +1,4 @@
+import "./header.css";
 import {
   AppBar,
   Box,
@@ -44,7 +45,7 @@ export function Header() {
                   width={50}
                   height={50}
                 />
-                <span>Simon Vereecke</span>
+                <span className="color">Simon Vereecke</span>
               </Link>
             </Typography>
             <Typography variant="h6">
