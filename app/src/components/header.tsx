@@ -2,6 +2,7 @@ import "./header.css";
 import {
   AppBar,
   Box,
+  Button,
   Link,
   ThemeProvider,
   Toolbar,
@@ -10,6 +11,14 @@ import {
 } from "@mui/material";
 
 const primary = {
+  // main: '#0086E4',
+  main: '#378FE6',
+  light: '#E0F2FE',
+  dark: '#1E202A',
+  contrastText: '#fff',
+};
+
+const secondary = {
   // main: '#0086E4',
   main: '#E0F2FE',
   light: '#E0F2FE',
@@ -20,6 +29,7 @@ const primary = {
 const theme = createTheme({
   palette: {
     primary: primary,
+    secondary: secondary,
     mode: 'light'
   },
 });
@@ -34,7 +44,7 @@ export function Header() {
         }}
         className="sticky top-0 z-50 "
       >
-        <AppBar position="static">
+        <AppBar position="static" color="secondary">
           <Toolbar>
             <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
               <Link href="/" className="flex flex-row items-center">
@@ -49,9 +59,7 @@ export function Header() {
               </Link>
             </Typography>
             <Typography variant="h6">
-              <Link href={"/contact"} color="inherit">
-                Contact
-              </Link>
+              <Button variant="outlined">Contact</Button>
             </Typography>
           </Toolbar>
         </AppBar>
