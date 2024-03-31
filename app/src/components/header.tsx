@@ -1,13 +1,13 @@
 import {
   AppBar,
   Box,
-  Button,
   Link,
   ThemeProvider,
   Toolbar,
   Typography,
   createTheme,
 } from "@mui/material";
+import { Button } from '../components';
 
 const primary = {
   // main: '#0086E4',
@@ -58,12 +58,7 @@ export function Header() {
               </Link>
             </Typography>
             <Typography variant="h6" className="bg-white rounded-3xl shadow-md hover:shadow-none">
-              <Button variant="outlined" sx={{
-                borderRadius: "30px",
-                textTransform: "none",
-                fontWeight: "bold",
-
-              }}><span className="mx-2">Contact</span></Button>
+              <Button />
             </Typography>
           </Toolbar>
         </AppBar>

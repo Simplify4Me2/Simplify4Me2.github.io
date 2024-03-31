@@ -1,7 +1,7 @@
 import "./App.css";
 import { Typography, Link } from "@mui/material";
 import { Header, ToggleSwitch } from "./components";
-import { ThemeProvider } from "./theme.provider";
+import { ThemeProvider } from "./providers";
 
 function App() {
   return (
