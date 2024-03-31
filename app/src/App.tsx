@@ -1,11 +1,11 @@
 import "./App.css";
 import { Typography, Link } from "@mui/material";
 import { Header, ToggleSwitch } from "./components";
-
+import { ThemeProvider } from "./theme.provider";
 
 function App() {
   return (
-    <>
+    <ThemeProvider>
       <main className="bg-sky-100 h-screen">
         <Header />
         <div className="flex justify-between">
@@ -28,16 +28,20 @@ function App() {
               <br />I like to craft solid and scalable frontend products with
               great user experience.
             </Typography>
-            <Link href="https://simplify4me2.github.io/qr-code-component">Link to QR Code Component</Link>
+            <Link href="https://simplify4me2.github.io/qr-code-component">
+              Link to QR Code Component
+            </Link>
             <br />
-            <Link href="https://simplify4me2.github.io/social-media-dashboard">Link to Social Media Dashboard</Link>
+            <Link href="https://simplify4me2.github.io/social-media-dashboard">
+              Link to Social Media Dashboard
+            </Link>
           </div>
           <div className="m-3">
             <ToggleSwitch />
           </div>
         </div>
       </main>
-    </>
+    </ThemeProvider>
   );
 }
 

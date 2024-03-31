@@ -1,4 +1,3 @@
-import "./header.css";
 import {
   AppBar,
   Box,
@@ -46,7 +45,7 @@ export function Header() {
       >
         <AppBar position="static" color="secondary">
           <Toolbar>
-            <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
+            <Typography variant="h6" component="div" sx={{ flexGrow: 1, color: "#378FE6", textDecoration: "none" }}>
               <Link href="/" className="flex flex-row items-center">
                 <img
                   src="/logo.svg"
@@ -55,11 +54,16 @@ export function Header() {
                   width={50}
                   height={50}
                 />
-                <span className="color">Simon Vereecke</span>
+                <span>Simon Vereecke</span>
               </Link>
             </Typography>
-            <Typography variant="h6">
-              <Button variant="outlined">Contact</Button>
+            <Typography variant="h6" className="bg-white rounded-3xl shadow-md hover:shadow-none">
+              <Button variant="outlined" sx={{
+                borderRadius: "30px",
+                textTransform: "none",
+                fontWeight: "bold",
+
+              }}><span className="mx-2">Contact</span></Button>
             </Typography>
           </Toolbar>
         </AppBar>
