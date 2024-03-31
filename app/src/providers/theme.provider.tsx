@@ -5,10 +5,6 @@ export const ThemeProvider = ({ children }: PropsWithChildren) => {
   const [theme, setTheme] = useState<"light" | "dark">("light");
 
   function toggleTheme() {
-
-    console.log("toggleTheme :", theme);
-    
-
     if (theme === "light") setTheme("dark");
     else setTheme("light");
   }

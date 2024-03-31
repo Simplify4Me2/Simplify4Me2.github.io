@@ -1,29 +1,32 @@
 import "./App.css";
 import { Typography, Link } from "@mui/material";
 import { Header, ToggleSwitch } from "./components";
-import { ThemeProvider } from "./providers";
+import { useContext } from "react";
+import { ThemeContext } from "./providers";
 
 function App() {
+
+  const { theme } = useContext(ThemeContext);
+
   return (
-    <ThemeProvider>
-      <main className="bg-sky-100 h-screen">
+      <main className={`${theme === 'light' ? 'bg-sky-100' : 'bg-sky-950'} h-screen`}>
         <Header />
         <div className="flex justify-between">
           <div>
             <Typography
-              sx={{ fontSize: 14 }}
-              color="text.secondary"
+              sx={{ fontSize: 14  }}
+              color={theme === 'light' ? "text.secondary" : "common.white"}
               gutterBottom
             >
               Hi
             </Typography>
-            <Typography variant="h5" component="div">
+            <Typography variant="h5" component="div" color={theme === 'light' ? "text.secondary" : "common.white"}>
               I&lsquo;m Simon
             </Typography>
-            <Typography sx={{ mb: 1.5, fontSize: 36 }} color="text.secondary">
+            <Typography sx={{ mb: 1.5, fontSize: 36 }} color={theme === 'light' ? "text.secondary" : "common.white"}>
               Full-stack software developer
             </Typography>
-            <Typography variant="body1">
+            <Typography variant="body1" color={theme === 'light' ? "text.secondary" : "common.white"}>
               My main areas of expertise include C#, Angular and React.
               <br />I like to craft solid and scalable frontend products with
               great user experience.
@@ -41,7 +44,6 @@ function App() {
           </div>
         </div>
       </main>
-    </ThemeProvider>
   );
 }
 
