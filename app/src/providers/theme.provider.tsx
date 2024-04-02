@@ -10,7 +10,7 @@ export const ThemeProvider = ({ children }: PropsWithChildren) => {
   }
 
   return (
-    <ThemeContext.Provider value={{ theme, toggleTheme }}>
+    <ThemeContext.Provider value={{ isDarkMode: theme === 'dark'  , theme, toggleTheme }}>
       {children}
     </ThemeContext.Provider>
   );

@@ -8,12 +8,14 @@ import {
   createTheme,
 } from "@mui/material";
 import { Button } from '../components';
+import { useContext } from "react";
+import { ThemeContext } from "../providers";
 
 const primary = {
   // main: '#0086E4',
   main: '#378FE6',
   light: '#E0F2FE',
-  dark: '#1E202A',
+  dark: '#082F49',
   contrastText: '#fff',
 };
 
@@ -21,7 +23,7 @@ const secondary = {
   // main: '#0086E4',
   main: '#E0F2FE',
   light: '#E0F2FE',
-  dark: '#1E202A',
+  dark: '#082F49 ',
   contrastText: '#fff',
 };
 
@@ -33,13 +35,24 @@ const theme = createTheme({
   },
 });
 
+const darkTheme = createTheme({
+  palette: {
+    primary: primary,
+    secondary: secondary,
+    mode: 'dark'
+  },
+});
+
 export function Header() {
+
+  const { isDarkMode } = useContext(ThemeContext);
+
   return (
-    <ThemeProvider theme={theme} >
+    <ThemeProvider theme={isDarkMode ? darkTheme : theme} >
       <Box
         sx={{
           flexGrow: 1,
-          background: "primary",
+          background: "primary"
         }}
         className="sticky top-0 z-50 "
       >
@@ -48,6 +61,7 @@ export function Header() {
             <Typography variant="h6" component="div" sx={{ flexGrow: 1, color: "#378FE6", textDecoration: "none" }}>
               <Link href="/" className="flex flex-row items-center">
                 <img
+                  // src={isDarkMode ? "/logo-contrast.svg" : "/logo.svg"}
                   src="/logo.svg"
                   className="h-12 pr-4"
                   alt="Logo"
