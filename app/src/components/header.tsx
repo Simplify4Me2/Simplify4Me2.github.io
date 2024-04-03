@@ -59,10 +59,9 @@ export function Header() {
         <AppBar position="static" color="secondary">
           <Toolbar>
             <Typography variant="h6" component="div" sx={{ flexGrow: 1}}>
-              <Link href="/" className="flex flex-row items-center">
+              <Link href="/" className="flex flex-row items-center" sx={{ textDecoration: "none", fontSize: '20' }}>
                 <img
                   src={isDarkMode ? "/logo-contrast.svg" : "/logo.svg"}
-                  // src="/logo.svg"
                   className="h-12 pr-4"
                   alt="Logo"
                   width={50}
