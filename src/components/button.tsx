@@ -1,11 +1,12 @@
 import { Button } from "@mui/material";
-import { useContext } from "react";
-import { ThemeContext } from "../providers";
 
-export function MyButton() {
-  const { isDarkMode } = useContext(ThemeContext);
+interface IMyButtonProps{
+  isDarkModeEnabled: boolean;
+}
 
-  if (isDarkMode)
+export function MyButton({isDarkModeEnabled} : IMyButtonProps) {
+
+  if (isDarkModeEnabled)
     return (
       <Button
         variant="outlined"

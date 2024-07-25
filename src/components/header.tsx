@@ -8,8 +8,6 @@ import {
   createTheme,
 } from "@mui/material";
 import { Button } from '../components';
-import { useContext } from "react";
-import { ThemeContext } from "../providers";
 
 const primary = {
   // main: '#0086E4',
@@ -47,12 +45,14 @@ const darkTheme = createTheme({
   },
 });
 
-export function Header() {
+interface IHeaderProps {
+  isDarkModeEnabled: boolean;
+}
 
-  const { isDarkMode } = useContext(ThemeContext);
+export function Header({ isDarkModeEnabled }:IHeaderProps) {
 
   return (
-    <ThemeProvider theme={isDarkMode ? darkTheme : theme} >
+    <ThemeProvider theme={isDarkModeEnabled ? darkTheme : theme} >
       <Box
         sx={{
           flexGrow: 1,
@@ -65,17 +65,17 @@ export function Header() {
             <Typography variant="h6" component="div" sx={{ flexGrow: 1}}>
               <Link href="/" className="flex flex-row items-center" sx={{ textDecoration: "none", fontSize: '20' }}>
                 <img
-                  src={isDarkMode ? "/logo-contrast.svg" : "/logo.svg"}
+                  src={isDarkModeEnabled ? "/logo-contrast.svg" : "/logo.svg"}
                   className="h-12 pr-4"
                   alt="Logo"
                   width={50}
                   height={50}
                 />
-                <span className={isDarkMode ? "text-white" : "text-sky-500"}>Simon Vereecke</span>
+                <span className={isDarkModeEnabled ? "text-white" : "text-sky-500"}>Simon Vereecke</span>
               </Link>
             </Typography>
             <Typography variant="h6" className="bg-white rounded-3xl shadow-md hover:shadow-none">
-              <Button />
+              <Button isDarkModeEnabled={isDarkModeEnabled} />
             </Typography>
           </Toolbar>
         </AppBar>

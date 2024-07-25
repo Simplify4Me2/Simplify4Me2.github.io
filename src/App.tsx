@@ -1,32 +1,31 @@
 import "./App.css";
 import { Typography, Link } from "@mui/material";
 import { Header, ToggleSwitch } from "./components";
-import { useContext } from "react";
-import { ThemeContext } from "./providers";
+import { useDarkModeState } from "./hooks/useDarkModeState";
 
 function App() {
 
-  const { theme } = useContext(ThemeContext);
+  const { isEnabled : isDarkModeEnabled, toggle: toggleDarkMode } = useDarkModeState();
 
   return (
-      <main className={`${theme === 'light' ? 'bg-sky-100' : 'bg-sky-950'} h-screen`}>
-        <Header />
+      <main className={`${isDarkModeEnabled? 'dark' : ''} h-screen bg-sky-100 dark:bg-sky-950`}>
+        <Header isDarkModeEnabled={isDarkModeEnabled} />
         <div className="flex justify-between">
           <div>
             <Typography
               sx={{ fontSize: 14  }}
-              color={theme === 'light' ? "text.secondary" : "common.white"}
+              color={isDarkModeEnabled ? "common.white" : "text.secondary"}
               gutterBottom
             >
               Hi
             </Typography>
-            <Typography variant="h5" component="div" color={theme === 'light' ? "text.secondary" : "common.white"}>
+            <Typography variant="h5" component="div" color={isDarkModeEnabled ? "common.white" : "text.secondary"}>
               I&lsquo;m Simon
             </Typography>
-            <Typography sx={{ mb: 1.5, fontSize: 36 }} color={theme === 'light' ? "text.secondary" : "common.white"}>
+            <Typography sx={{ mb: 1.5, fontSize: 36 }} color={isDarkModeEnabled ? "common.white" : "text.secondary"}>
               Full-stack software developer
             </Typography>
-            <Typography variant="body1" color={theme === 'light' ? "text.secondary" : "common.white"}>
+            <Typography variant="body1" color={isDarkModeEnabled ? "common.white" : "text.secondary"}>
               My main areas of expertise include C#, Angular and React.
               <br />I like to craft solid and scalable frontend products with
               great user experience.
@@ -38,9 +37,13 @@ function App() {
             <Link href="https://simplify4me2.github.io/social-media-dashboard">
               Link to Social Media Dashboard
             </Link>
+            <br />
+            <Link href="https://simplify4me2.github.io/ping-coming-soon/">
+              Link to Ping single column coming soon page
+            </Link>
           </div>
           <div className="m-3">
-            <ToggleSwitch />
+            <ToggleSwitch isEnabled={isDarkModeEnabled} onChange={toggleDarkMode} />
           </div>
         </div>
       </main>

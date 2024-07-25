@@ -1,14 +1,41 @@
-import { useContext } from "react";
-import "./toggle-switch.css";
-import { ThemeContext } from "../providers";
+interface IToggleSwitchProps {
+  isEnabled: boolean;
+  onChange: () => void;
+}
 
-export function ToggleSwitch() {
-  const { toggleTheme } = useContext(ThemeContext);
-
+export function ToggleSwitch({ isEnabled, onChange }: IToggleSwitchProps) {
   return (
-    <label className="relative inline-block w-[60px] h-[34px]">
-      <input type="checkbox" className="opacity-0 h-0 w-0" onClick={toggleTheme} />
-      <span className="absolute cursor-pointer gray rounded-3xl before:rounded-3xl top-0 left-0 right-0 bottom-0 transition slider"></span>
-    </label>
+    <>
+      <label className="flex cursor-pointer select-none items-center mt-1">
+        <input
+          type="checkbox"
+          checked={isEnabled}
+          onChange={onChange}
+          className="sr-only"
+          aria-label="Toggle dark mode"
+        />
+        {/* <span
+          className={`box block h-[24px] w-[48px] rounded-full bg-gradient-to-r ${
+            isEnabled ? `from-true-blue to-green` : `bg-gray`
+          } hover:from-true-blue hover:to-green`}
+        >
+          <span
+            className={`relative left-[3px] top-[3px] flex h-[18px] w-[18px] items-center justify-center rounded-full bg-white dark:bg-dark-blue-600 
+          transition ${isEnabled ? "" : "translate-x-6"}`}
+          ></span>
+        </span> */}
+
+        <span
+          className={`box block h-[24px] w-[48px] rounded-full bg-gradient-to-r ${
+            isEnabled ? `from-blue-600 to-green-400` : `bg-gray-300`
+          } hover:from-blue-600 hover:to-green-400`}
+        >
+          <span
+            className={`relative left-[3px] top-[3px] flex h-[18px] w-[18px] items-center justify-center rounded-full bg-white dark:bg-blue-950 
+          transition ${isEnabled ? "" : "translate-x-6"}`}
+          ></span>
+        </span>
+      </label>
+    </>
   );
 }
