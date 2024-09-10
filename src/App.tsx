@@ -45,6 +45,7 @@ function App() {
             <Link href="https://simplify4me2.github.io/advice-generator-app/">
               Link to Advice Generator App
             </Link>
+            <br />
             <Link href="https://simplify4me2.github.io/age-calculator-app/">
               Link to Age Calculator App
             </Link>
