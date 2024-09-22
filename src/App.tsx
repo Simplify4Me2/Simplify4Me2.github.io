@@ -48,6 +48,9 @@ function App() {
             <Link href="https://simplify4me2.github.io/age-calculator-app/">
               Link to Age Calculator App
             </Link>
+            <Link href="https://simplify4me2.github.io/ip-address-tracker/">
+              Link to IP Address Tracker
+            </Link>
           </div>
           <div className="m-3">
             <ToggleSwitch isEnabled={isDarkModeEnabled} onChange={toggleDarkMode} />
