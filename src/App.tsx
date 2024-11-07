@@ -17,7 +17,7 @@ function App() {
               color={isDarkModeEnabled ? "common.white" : "text.secondary"}
               gutterBottom
             >
-              Hi
+              Hi there,
             </Typography>
             <Typography variant="h5" component="div" color={isDarkModeEnabled ? "common.white" : "text.secondary"}>
               I&lsquo;m Simon
