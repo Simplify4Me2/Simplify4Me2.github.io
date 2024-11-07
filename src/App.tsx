@@ -53,6 +53,10 @@ function App() {
             <Link href="https://simplify4me2.github.io/ip-address-tracker/">
               Link to IP Address Tracker
             </Link>
+            <br />
+            <Link href="https://simplify4me2.github.io/minimalist-portfolio/">
+              Link to Mininmalist Portfolio
+            </Link>
           </div>
           <div className="m-3">
             <ToggleSwitch isEnabled={isDarkModeEnabled} onChange={toggleDarkMode} />
