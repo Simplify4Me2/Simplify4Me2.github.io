@@ -1,4 +1,4 @@
-import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import { createBrowserRouter, createHashRouter, RouterProvider } from "react-router-dom";
 import { Home, Projects } from "./pages";
 
 const router = createBrowserRouter([
@@ -12,8 +12,21 @@ const router = createBrowserRouter([
   },
 ]);
 
+const hashRouter = createHashRouter(
+  [
+    {
+      path: "/*",
+      element: <Home />,
+    },
+    {
+      path: "/projects",
+      element: <Projects />,
+    },
+  ]
+);
+
 function App() {
-  return <RouterProvider router={router} />;
+  return <RouterProvider router={hashRouter} />;
 }
 
 export default App;
