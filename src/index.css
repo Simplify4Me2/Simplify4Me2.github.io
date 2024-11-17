@@ -1,6 +1,18 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer base {
+  :root {
+    --color-slightly-desaturated-cyan: 167deg 36% 54%;
+    --color-dark-blue: 205deg 41% 21%;
+    --color-grayish-dark-blue: 245deg 10% 22%;
+    --color-very-light-grey: 0deg 0% 98%;
+    --color-light-grey: 240deg 2% 92%;
+    --color-bright-red: 0deg 90% 57%;
+  }
+}
+
 /* 
 :root {
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
