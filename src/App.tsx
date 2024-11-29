@@ -1,20 +1,30 @@
 import './App.css';
-import { createHashRouter, RouterProvider } from "react-router-dom";
+import { HashRouter, Outlet, Route, Routes } from "react-router-dom";
 import { Home, Projects } from "./pages";
-
-const router = createHashRouter([
-  {
-    path: "/*",
-    element: <Home />,
-  },
-  {
-    path: "/projects",
-    element: <Projects />,
-  },
-]);
+import { Footer } from './components';
 
 function App() {
-  return <RouterProvider router={router} future={{ v7_startTransition: true }} />;
+  // return <RouterProvider router={router} future={{ v7_startTransition: true }} />;
+  return <HashRouter future={{ v7_relativeSplatPath: true, v7_startTransition: true }}>
+  <Routes>
+    <Route path="/" element={<LayOut />}>
+      <Route index element={<Home />} />
+      {/* <Route path="/portfolio" element={<PortfolioOverview />} />
+      <Route path="/contact" element={<Contact />} /> */}
+      <Route path="/projects" element={<Projects />} />
+    </Route>
+  </Routes>
+</HashRouter>
+}
+
+function LayOut() {
+  return (
+    <>
+      {/* <Header /> */}
+      <Outlet />
+      <Footer />
+    </>
+  );
 }
 
 export default App;
