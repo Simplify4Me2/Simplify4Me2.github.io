@@ -5,7 +5,7 @@ import GitHubIcon from "../assets/icons/github.svg";
 import TwitterIcon from "../assets/icons/twitter.svg";
 import LinkedInIcon from "../assets/icons/linkedin.svg";
 
-import ProfileDesktopImage from "../assets/image-homepage-profile.jpg";
+// import ProfileDesktopImage from "../assets/image-homepage-profile.jpg";
 import { PropsWithChildren } from "react";
 
 export function Home() {
@@ -33,13 +33,13 @@ export function Home() {
         </nav>
       </header>
       <section className="flex flex-col lg:flex-row lg:justify-between pt-2 pb-[3.3rem lg:pt-16">
-        <img
+        {/* <img
           src={ProfileDesktopImage}
           alt="homepage image"
           className="hidden lg:block"
-        />
+        /> */}
         <div className="border-y-[0.25px] border-solid border-grayish-dark-blue/15  my-8 pt-8 pb-12 lg:flex lg:flex-col lg:mx-20 lg:mb-0 lg:pt-12 lg:pb-0 lg:mt-0 lg:w-[22.5rem]">
-          <h1 className="font-ibarra font-bold text-4xl tracking-tight pb-6">
+          <h1 className="font-serif font-bold text-4xl tracking-tight pb-6">
             About Me
           </h1>
           <p className="font-publicSans leading-[1.875rem] text-left pt-[0.25rem] pb-1.5 min-h-[11.75rem]">

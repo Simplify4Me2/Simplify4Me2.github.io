@@ -1,3 +1,4 @@
+import './App.css';
 import { createHashRouter, RouterProvider } from "react-router-dom";
 import { Home, Projects } from "./pages";
 
