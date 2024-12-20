@@ -1,4 +1,5 @@
 export { ToggleSwitch } from "./toggle-switch";
-export { Header } from "./header";
+export { ProjectsHeader } from "./ProjectsHeader";
+export { Header } from "./Header";
 export { MyButton as Button }  from './button';
 export { Footer } from './Footer';

@@ -1,37 +1,25 @@
 import { Link } from "react-router-dom";
-import LogoIcon from "../assets/logo.svg";
-import HamburgerIcon from "../assets/icons/hamburger.svg";
-import GitHubIcon from "../assets/icons/github.svg";
-import TwitterIcon from "../assets/icons/twitter.svg";
-import LinkedInIcon from "../assets/icons/linkedin.svg";
+import DownArrowsIcon from "../assets/icons/down-arrows.svg";
 
-// import ProfileDesktopImage from "../assets/image-homepage-profile.jpg";
 import { PropsWithChildren } from "react";
+import { HomePageImage } from "../responsive-images";
 
 export function Home() {
   return (
-    <>
-      <header className="flex items-center justify-between p-8 md:pt-16 md:pb-12 md:px-10 lg:px-[5.25rem]">
-        <Link to="/">
-          <img src={LogoIcon} alt="logo" />
-        </Link>
-        <button>
-          <img src={HamburgerIcon} className="md:hidden" />
-        </button>
-        <nav className="hidden md:block">
-          <ul className="md:flex gap-[42px] font-publicSans text-xs tracking-[0.125rem]">
-            <li>
-              <Link to="/">HOME</Link>
-            </li>
-            <li>
-              <Link to="portfolio">PORTFOLIO</Link>
-            </li>
-            <li>
-              <Link to="contact">CONTACT ME</Link>
-            </li>
-          </ul>
-        </nav>
-      </header>
+    <main className="px-8">
+      <section className="flex flex-col pt-2 md:pt-0 pb-[5.5rem] relative lg:pt-[0.3rem]">
+        <HomePageImage />
+        <div className="flex flex-col justify-end bg-very-light-grey md:absolute md:bottom-[5.5rem] md:w-3/4 lg:w-2/5 md:h-[17.5rem] lg:h-[22.5rem]">
+          <h1
+            className={`font-serif font-bold text-[2.5rem] leading-[2.65rem] tracking-[-0.01em] grow pt-6 md:pt-14 pb-[1.85rem] max-w-md md:w-3/4 lg:text-[3.1rem] lg:leading-[3.1rem] lg:w-[24.5rem] lg:pt-16 lg:pb-14 lg:tracking-normal`}
+          >
+            {/* Hey, I&rsquo;m Alex Spencer and I love building beautiful websites */}
+            Hey, I&rsquo;m Simon Vereecke and I love building beautiful websites
+          </h1>
+          <Button variant="contained-with-down-arrow">ABOUT ME</Button>
+        </div>
+      </section>
+
       <section className="flex flex-col lg:flex-row lg:justify-between pt-2 pb-[3.3rem lg:pt-16">
         {/* <img
           src={ProfileDesktopImage}
@@ -57,44 +45,12 @@ export function Home() {
           </Button>
         </div>
       </section>
-
-      <footer className="w-full bg-grayish-dark-blue h-fit text-white py-[3.5rem] lg:py-6 lg:px-9 flex justify-center">
-      <div className="max-w-screen-xl flex flex-col gap-9 lg:flex-row justify-between items-center">
-        <img src={LogoIcon} className="invert" />
-        <nav className="lg:mr-[35rem] lg:pl-2">
-          <ul className="flex flex-col lg:flex-row justify-between text-center font-publicSans text-xs font-extralight tracking-[0.15rem] h-28 lg:h-fit lg:gap-10">
-            <li>
-              <Link to="/">HOME</Link>
-            </li>
-            <li>
-              <Link to="portfolio">PORTFOLIO</Link>
-            </li>
-            <li>
-              <Link to="contact">CONTACT ME</Link>
-            </li>
-          </ul>
-        </nav>
-        <nav>
-          <ul className="flex gap-4 lg:items-center">
-            <li>
-              <img src={GitHubIcon} className="invert" />
-            </li>
-            <li>
-              <img src={TwitterIcon} className="invert" />
-            </li>
-            <li>
-              <img src={LinkedInIcon} className="invert" />
-            </li>
-          </ul>
-        </nav>
-      </div>
-    </footer>
-    </>
+    </main>
   );
 }
 
 interface IButtonProps {
-  variant: "contained" | "outlined";
+  variant: "contained" | "contained-with-down-arrow" | "outlined";
   className?: string;
   onClick?: () => void;
 }
@@ -105,7 +61,24 @@ function Button({
   className,
   onClick,
 }: PropsWithChildren<IButtonProps>) {
-  if (variant === "contained") return <>{children}</>;
+  if (variant === "contained-with-down-arrow")
+    return (
+      <button className="flex items-center h-12 w-[12.5rem] bg-dark-blue">
+        <img src={DownArrowsIcon} className="h-full p-4 bg-dark-blue" />
+        <p className="font-publicSans w-full text-white text-xs font-extralight tracking-[0.15rem]">
+          {children}
+        </p>
+      </button>
+    );
+
+  if (variant === "contained")
+    return (
+      <button className="flex items-center h-12 w-[12.5rem] bg-dark-blue">
+        <p className="font-publicSans w-full text-white text-xs font-extralight tracking-[0.15rem]">
+          {children}
+        </p>
+      </button>
+    );
 
   return (
     <button

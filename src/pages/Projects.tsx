@@ -1,5 +1,5 @@
 import { Link, Typography } from "@mui/material";
-import { Header, ToggleSwitch } from "../components";
+import { ProjectsHeader, ToggleSwitch } from "../components";
 import { useDarkModeState } from "../hooks/useDarkModeState";
 
 export function Projects() {
@@ -7,7 +7,7 @@ export function Projects() {
 
   return (
       <main className={`${isDarkModeEnabled? 'dark' : ''} h-screen bg-sky-100 dark:bg-sky-950`}>
-        <Header isDarkModeEnabled={isDarkModeEnabled} />
+        <ProjectsHeader isDarkModeEnabled={isDarkModeEnabled} />
         <div className="flex justify-between">
           <div>
             <Typography

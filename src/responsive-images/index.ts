@@ -1,0 +1,1 @@
+export { HomePageImage } from './HomePageImage';

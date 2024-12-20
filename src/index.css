@@ -19,6 +19,14 @@
     font-display: swap;
     src: url(./fonts/IbarraRealNova-Regular.ttf);
   }
+
+  @font-face {
+    font-family: 'IbarraRealNova';
+    font-style: bold;
+    font-weight: 700;
+    font-display: swap;
+    src: url(./fonts/IbarraRealNova-Bold.ttf);
+  }
 }
 
 body {
@@ -96,3 +104,16 @@ button:focus-visible {
     background-color: #f9f9f9;
   }
 } */
+
+@media (prefers-color-scheme: light) {
+  :root {
+    /* color: #213547; */
+    background-color: #FAFAFA;
+  }
+  a:hover {
+    color: #747bff;
+  }
+  /* button {
+    background-color: #f9f9f9;
+  } */
+}

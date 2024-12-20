@@ -1,10 +1,9 @@
 import './App.css';
 import { HashRouter, Outlet, Route, Routes } from "react-router-dom";
 import { Home, Projects } from "./pages";
-import { Footer } from './components';
+import { Footer, Header } from './components';
 
 function App() {
-  // return <RouterProvider router={router} future={{ v7_startTransition: true }} />;
   return <HashRouter future={{ v7_relativeSplatPath: true, v7_startTransition: true }}>
   <Routes>
     <Route path="/" element={<LayOut />}>
@@ -20,7 +19,7 @@ function App() {
 function LayOut() {
   return (
     <>
-      {/* <Header /> */}
+      <Header />
       <Outlet />
       <Footer />
     </>
