@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 import DownArrowsIcon from "../assets/icons/down-arrows.svg";
 
 import { PropsWithChildren } from "react";
-import { HomePageImage } from "../responsive-images";
+import { HomePageImage, ProfileImage } from "../responsive-images";
 
 export function Home() {
   return (
@@ -26,6 +26,7 @@ export function Home() {
           alt="homepage image"
           className="hidden lg:block"
         /> */}
+        <ProfileImage />
         <div className="border-y-[0.25px] border-solid border-grayish-dark-blue/15  my-8 pt-8 pb-12 lg:flex lg:flex-col lg:mx-20 lg:mb-0 lg:pt-12 lg:pb-0 lg:mt-0 lg:w-[22.5rem]">
           <h1 className="font-serif font-bold text-4xl tracking-tight pb-6">
             About Me
