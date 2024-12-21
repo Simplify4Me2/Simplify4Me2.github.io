@@ -25,7 +25,7 @@ export function Home() {
         <div className="border-y-[0.25px] border-solid border-grayish-dark-blue/15  my-8 pt-8 pb-[3.25rem] lg:flex lg:flex-col lg:mx-20 lg:mb-0 lg:pt-12 lg:pb-0 lg:mt-0 lg:w-[22.5rem]">
           <SectionHeader>About Me</SectionHeader>
           {/* <p className="font-sans leading-[1.875rem] pt-7 pb-2 min-h-[11.75rem]"> */}
-          <p className="font-sans leading-[1.875rem] pt-7 pb-2">
+          <p className="font-sans tracking-[0.01rem] leading-[1.875rem] pt-7 pb-2">
             {/* I'm a full-stack software developer looking for a new role in an
             exciting company. I focus on writing accessible HTML, using modern
             CSS practices and writing clean JavaScript. When writing JavaScript
