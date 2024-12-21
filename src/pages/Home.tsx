@@ -13,7 +13,6 @@ export function Home() {
           <h1
             className={`font-serif font-bold text-[2.5rem] leading-[2.65rem] tracking-[-0.01em] grow pt-6 md:pt-14 pb-[1.85rem] max-w-md md:w-3/4 lg:text-[3.1rem] lg:leading-[3.1rem] lg:w-[24.5rem] lg:pt-16 lg:pb-14 lg:tracking-normal`}
           >
-            {/* Hey, I&rsquo;m Alex Spencer and I love building beautiful websites */}
             Hey, I&rsquo;m Simon Vereecke and I love building beautiful websites
           </h1>
           <Button variant="contained-with-down-arrow">ABOUT ME</Button>
@@ -26,22 +25,22 @@ export function Home() {
           <SectionHeader>About Me</SectionHeader>
           {/* <p className="font-sans leading-[1.875rem] pt-7 pb-2 min-h-[11.75rem]"> */}
           <p className="font-sans tracking-[0.01rem] leading-[1.875rem] pt-7 pb-2">
-            {/* I'm a full-stack software developer looking for a new role in an
+            I'm a full-stack software developer looking for a new role in an
             exciting company. I focus on writing accessible HTML, using modern
             CSS practices and writing clean JavaScript. When writing JavaScript
             code, I mostly use React, but I can adapt to whatever tools are
             required. I'm based in Aarschot, BE, but I'm happy working remotely
             and have experience in remote teams. When I'm not coding, you'll
             find me outdoors. I love being out in nature whether that's going
-            for a walk, run or cycling. I'd love you to check out my work. */}
-            I'm a junior front-end developer looking for a new role in an
+            for a walk, run or cycling. I'd love you to check out my work.
+            {/* I'm a junior front-end developer looking for a new role in an
             exciting company. I focus on writing accessible HTML, using modern
             CSS practices and writing clean JavaScript. When writing JavaScript
             code, I mostly use React, but I can adapt to whatever tools are
             required. I'm based in London, UK, but I'm happy working remotely
             and have experience in remote teams. When I'm not coding, you'll
             find me outdoors. I love being out in nature whether that's going
-            for a walk, run or cycling. I'd love you to check out my work.
+            for a walk, run or cycling. I'd love you to check out my work. */}
           </p>
           <Button variant="outlined" className="mt-4 self-start">
             <Link to="projects">GO TO PORTFOLIO</Link>
