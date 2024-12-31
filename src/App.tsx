@@ -1,6 +1,6 @@
 import './App.css';
 import { HashRouter, Outlet, Route, Routes } from "react-router-dom";
-import { Home, Projects } from "./pages";
+import { Contact, Home, Projects } from "./pages";
 import { Footer, Header } from './components';
 
 function App() {
@@ -8,8 +8,8 @@ function App() {
   <Routes>
     <Route path="/" element={<LayOut />}>
       <Route index element={<Home />} />
-      {/* <Route path="/portfolio" element={<PortfolioOverview />} />
-      <Route path="/contact" element={<Contact />} /> */}
+      {/* <Route path="/portfolio" element={<PortfolioOverview />} /> */}
+      <Route path="/contact" element={<Contact />} />
       <Route path="/projects" element={<Projects />} />
     </Route>
   </Routes>
