@@ -2,13 +2,13 @@ import { Link } from "react-router-dom";
 import DownArrowsIcon from "../assets/icons/down-arrows.svg";
 
 import { PropsWithChildren } from "react";
-import { HomePageImage, ProfileImage } from "../responsive-images";
+import { HomepageHeroImage, ProfileImage } from "../images";
 
 export function Home() {
   return (
     <main className="px-8">
       <section className="flex flex-col pt-2 md:pt-0 pb-[5.5rem] relative lg:pt-[0.3rem]">
-        <HomePageImage />
+        <HomepageHeroImage />
         <div className="flex flex-col justify-end bg-very-light-grey md:absolute md:bottom-[5.5rem] md:w-3/4 lg:w-2/5 md:h-[17.5rem] lg:h-[22.5rem]">
           <h1
             className={`font-serif font-bold text-[2.5rem] leading-[2.65rem] tracking-[-0.01em] grow pt-6 md:pt-14 pb-[1.85rem] max-w-md md:w-3/4 lg:text-[3.1rem] lg:leading-[3.1rem] lg:w-[24.5rem] lg:pt-16 lg:pb-14 lg:tracking-normal`}
