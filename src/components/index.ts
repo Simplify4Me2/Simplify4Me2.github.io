@@ -1,7 +1,8 @@
 export { Article } from "./Article";
+export { default as ArticleHeader } from "./ArticleHeader";
 export { Footer } from "../Footer";
 export { Header } from "../Header";
-export { MyButton as Button } from "./button";
+export { Button } from "./button";
 export { ProjectLink } from "./ProjectLink";
 export { ProjectsHeader } from "./ProjectsHeader";
 export { Section } from "./Section";

@@ -1,3 +1,3 @@
 export { Contact } from "./Contact";
-export { Home } from "./Home";
+export { default as Home } from "./home/Home";
 export { Projects } from "./Projects";
