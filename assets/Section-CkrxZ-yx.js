@@ -1,0 +1,1 @@
+import{j as s}from"./index-KUWcSLRC.js";function r({children:e,className:t="",ref:o}){return s.jsx("section",{ref:o,className:`flex flex-col md:flex-row lg:justify-between ${t}`,children:e})}export{r as S};
