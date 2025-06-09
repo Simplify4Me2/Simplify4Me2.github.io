@@ -28,7 +28,7 @@ function Home() {
           <HomepageHeroImage />
           <div className="flex flex-col justify-end bg-very-light-grey md:absolute md:bottom-[5.5rem] md:w-3/4 lg:w-2/5 md:h-[17.5rem] lg:h-[22.5rem]">
             <ArticleHeader className="grow pt-6 md:pt-14 pb-[1.85rem] max-w-md md:w-3/4 lg:text-[3.1rem] lg:leading-[3.1rem] lg:w-[24.5rem] lg:pt-16 lg:pb-14 lg:tracking-normal">
-              Hey, I&rsquo;m Alex Spencer and I love building beautiful websites
+              Hi, I&rsquo;m Simon Vereecke. I turn complex business processes into smart software.
             </ArticleHeader>
             <Button onClick={scrollToAboutMe} className="group">
               <img src={DownArrowsIcon} className="h-full p-4 group-hover:filter group-hover:hidden" />
@@ -46,15 +46,14 @@ function Home() {
             <div className="flex flex-col flex-1 justify-start pb-[1.65rem] lg:pb-5 pt-[1.9rem] md:ml-9 lg:ml-0 md:pt-12 border-y-[0.25px] border-solid border-grayish-dark-blue/15">
               <ArticleHeader className="pb-2">About Me</ArticleHeader>
               <TextBlock className="pt-[1.35rem] lg:pt-6 pb-6">
-                I'm a junior front-end developer looking for a new role in an
-                exciting company. I focus on writing accessible HTML, using
-                modern CSS practices and writing clean JavaScript. When writing
-                JavaScript code, I mostly use React, but I can adapt to whatever
-                tools are required. I'm based in London, UK, but I'm happy
-                working remotely and have experience in remote teams. When I'm
-                not coding, you'll find me outdoors. I love being out in nature
-                whether that's going for a walk, run or cycling. I'd love you to
-                check out my work.
+                I'm a seasoned software developer with a strong .NET background, 
+                passionate about building scalable and efficient business applications. 
+                I focus on clean architecture, test-driven development, and DevOps best 
+                practices. While I specialize in C# and .NET Core, I'm comfortable working 
+                across the full stack with tools like Angular, React, and Azure. I'm based 
+                in Belgium and have experience working both onsite and in remote teams. 
+                Outside of coding, I enjoy being active and value simplicity—both in life 
+                and in software. Feel free to explore my work.
               </TextBlock>
               <ProjectLink to="/portfolio" className="mb-6">GO TO PORTFOLIO</ProjectLink>
             </div>

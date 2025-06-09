@@ -67,9 +67,9 @@ function Contact() {
         <div className="lg:min-w-[40rem] lg:pl-1">
           <TextBlock fontSize="[0.95rem]" tracking="tight" className="lg:max-w-[40rem] lg:pr-4 lg:pt-0 pt-[1.35rem] pb-7 lg:text-base lg:leading-[1.875rem]">
             I'd love to hear about what you're working on and how I could help.
-            I'm currently looking for a new role and am open to a wide range of
+            I'm currently open for a new role and welcome a wide range of
             opportunities. My preference would be to find a position in a
-            company in London. But I'm also happy to hear about opportunities
+            company in Flanders, Belgium. But I'm also happy to hear about opportunities
             that don't fit that description. I'm a hard&#8209;working and
             positive person who will always approach each task with a sense of
             purpose and attention to detail. Please do feel free to check out my
