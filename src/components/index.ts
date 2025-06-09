@@ -1,9 +1,10 @@
 export { Article } from "./Article";
-export { Footer } from "./Footer";
-export { Header } from "./Header";
+export { Footer } from "../Footer";
+export { Header } from "../Header";
 export { MyButton as Button } from "./button";
 export { ProjectLink } from "./ProjectLink";
 export { ProjectsHeader } from "./ProjectsHeader";
 export { Section } from "./Section";
+export { SocialMediaNav } from "./SocialMediaNav";
 export { TextBlock } from "./TextBlock";
 export { ToggleSwitch } from "./toggle-switch";

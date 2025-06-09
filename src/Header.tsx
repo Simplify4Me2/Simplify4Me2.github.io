@@ -1,8 +1,8 @@
 import { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
-import LogoIcon from "../assets/logo.svg";
-import HamburgerIcon from "../assets/icons/hamburger.svg";
-import CloseIcon from "../assets/icons/close.svg";
+import LogoIcon from "./assets/logo.svg";
+import HamburgerIcon from "./assets/icons/hamburger.svg";
+import CloseIcon from "./assets/icons/close.svg";
 
 export function Header() {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -37,8 +37,8 @@ export function Header() {
             <Link
               to="/"
               className={`${
-                location.pathname === "/" ? "text-blue-500 font-bold" : ""
-              }`}
+                location.pathname === "/" ? "text-slightly-desaturated-cyan font-bold" : "" 
+              } hover:text-slightly-desaturated-cyan`}
             >
               HOME
             </Link>
@@ -48,9 +48,9 @@ export function Header() {
               to="/portfolio"
               className={`${
                 location.pathname === "/portfolio"
-                  ? "text-blue-500 font-bold"
+                  ? "text-slightly-desaturated-cyan font-bold"
                   : ""
-              }`}
+              } hover:text-slightly-desaturated-cyan`}
             >
               PORTFOLIO
             </Link>
@@ -60,9 +60,9 @@ export function Header() {
               to="/contact"
               className={`${
                 location.pathname === "/contact"
-                  ? "text-blue-500 font-bold"
+                  ? "text-slightly-desaturated-cyan font-bold"
                   : ""
-              }`}
+              } hover:text-slightly-desaturated-cyan`}
             >
               CONTACT ME
             </Link>
