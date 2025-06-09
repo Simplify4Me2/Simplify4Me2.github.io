@@ -1,11 +1,12 @@
 export { Article } from "./Article";
 export { default as ArticleHeader } from "./ArticleHeader";
-export { Footer } from "../Footer";
-export { Header } from "../Header";
-export { Button } from "./button";
+export { Button } from "./Button";
+export { PortfolioNavigation } from "./PortfolioNavigation";
+export { ProjectArticle } from "./ProjectArticle";
+export { ProjectBackground } from "./ProjectBackground";
 export { ProjectLink } from "./ProjectLink";
-export { ProjectsHeader } from "./ProjectsHeader";
 export { Section } from "./Section";
 export { SocialMediaNav } from "./SocialMediaNav";
+export { StaticPreviews } from "./StaticPreviews";
+export { Tags } from "./Tags";
 export { TextBlock } from "./TextBlock";
-export { ToggleSwitch } from "./toggle-switch";
