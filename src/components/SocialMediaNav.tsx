@@ -1,5 +1,5 @@
 import GitHubIcon from "../assets/icons/github.svg";
-import TwitterIcon from "../assets/icons/twitter.svg";
+import XIcon from "../assets/icons/x.svg";
 import LinkedInIcon from "../assets/icons/linkedin.svg";
 
 interface SocialMediaNavProps {
@@ -16,7 +16,7 @@ export function SocialMediaNav({ inverted = false, className }: SocialMediaNavPr
         <img src={GitHubIcon} className={iconClass} />
       </li>
       <li>
-        <img src={TwitterIcon} className={iconClass} />
+        <img src={XIcon} className={iconClass} />
       </li>
       <li>
         <img src={LinkedInIcon} className={iconClass} />
