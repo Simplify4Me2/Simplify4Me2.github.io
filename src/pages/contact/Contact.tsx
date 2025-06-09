@@ -33,7 +33,7 @@ function Contact() {
     }
 
     // Here you would typically send the form data to your server or email service
-    alert("Mail sent!");
+    alert("Still actively working on this feature! Please mail me at simon.vereecke@live.com"); // Placeholder for actual form submission logic
     // If you would like to make your contact form actually send you the data, you could use a service like [Formspree](https://formspree.io/) to hook it up.
 
     formElement.reset();

@@ -39,7 +39,7 @@ export function Insure() {
                 Interaction Design / Front End Development
               </Tags>
               <Tags classname="mb-6 md:mb-4 lg:mb-7">HTML / CSS / JS</Tags>
-              <ProjectLink to="insure" className="mb-6">VISIT WEBSITE</ProjectLink>
+              <ProjectLink to="https://www.frontendmentor.io/profile/Simplify4Me2" className="mb-6">VISIT WEBSITE</ProjectLink>
             </div>
             <TextBlock
               fontSize="[0.95rem]"
