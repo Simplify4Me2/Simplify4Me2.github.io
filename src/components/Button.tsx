@@ -8,4 +8,4 @@ export function Button({ children, className, disabled, onClick }: PropsWithChil
         ${disabled ? "opacity-20 cursor-not-allowed" : ""}`}>
     {children}
   </button>
-};
+}
