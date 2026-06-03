@@ -53,7 +53,7 @@ function Contact() {
   }
 
   function validateEmailField(email: string) {
-    const emailPattern = /^[a-z0-9._%+\-]+@[a-z0-9.\-]+\.[a-z]{2,}$/i;
+    const emailPattern = /^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$/i;
     if (!emailPattern.test(email)) {
       return "Please enter a valid email address";
     }
