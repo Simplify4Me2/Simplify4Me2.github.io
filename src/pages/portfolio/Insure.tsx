@@ -35,10 +35,10 @@ export function Insure() {
                 project required was to enable the toggling of the mobile
                 navigation.
               </TextBlock>
-              <Tags classname="mb-0 md:mt-3 lg:mt-0 lg:mb-3">
+              <Tags className="mb-0 md:mt-3 lg:mt-0 lg:mb-3">
                 Interaction Design / Front End Development
               </Tags>
-              <Tags classname="mb-6 md:mb-4 lg:mb-7">HTML / CSS / JS</Tags>
+              <Tags className="mb-6 md:mb-4 lg:mb-7">HTML / CSS / JS</Tags>
               <ProjectLink to="https://www.frontendmentor.io/profile/Simplify4Me2" className="mb-6">VISIT WEBSITE</ProjectLink>
             </div>
             <TextBlock

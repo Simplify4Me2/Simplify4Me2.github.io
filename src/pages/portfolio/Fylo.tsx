@@ -35,10 +35,10 @@ export function Fylo() {
                 fully&#8209;responsive. I took a mobile&#8209;first approach and
                 used modern CSS like Flexbox and Grid for layout purposes.
               </TextBlock>
-              <Tags classname="mb-0 md:mt-3 lg:mt-0 lg:mb-3">
+              <Tags className="mb-0 md:mt-3 lg:mt-0 lg:mb-3">
                 Interaction Design / Front End Development
               </Tags>
-              <Tags classname="mb-6 md:mb-4 lg:mb-7">HTML / CSS</Tags>
+              <Tags className="mb-6 md:mb-4 lg:mb-7">HTML / CSS</Tags>
               <ProjectLink to="https://www.frontendmentor.io/profile/Simplify4Me2" className="mb-6">VISIT WEBSITE</ProjectLink>
             </div>
             <TextBlock
