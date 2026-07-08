@@ -3,6 +3,7 @@ type ImageProps = {
   tabletImage: string;
   desktopImage: string;
   alt: string;
+  className?: string;
 };
 
 export function Image({
@@ -10,15 +11,16 @@ export function Image({
   tabletImage,
   desktopImage,
   alt,
+  className,
 }: ImageProps) {
   return (
-    <picture>
+    <picture className={className}>
       <source media="(min-width: 1024px)" srcSet={desktopImage} />
       <source media="(min-width: 768px)" srcSet={tabletImage} />
       <img
         src={mobileImage}
         alt={alt}
-        className="h-fit self-center"
+        className="w-full h-full object-cover"
         loading="lazy"
       />
     </picture>

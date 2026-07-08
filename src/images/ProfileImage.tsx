@@ -10,6 +10,7 @@ export function ProfileImage() {
       tabletImage={TabletImage}
       desktopImage={DesktopImage}
       alt="Profile image"
+      className="self-center w-full md:w-[281px] lg:w-[540px] shrink-0"
     />
   );
 }
