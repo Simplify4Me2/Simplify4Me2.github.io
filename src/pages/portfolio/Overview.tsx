@@ -1,4 +1,4 @@
-import { Section, ProjectLink, ArticleHeader } from "../../components";
+import { Section, ProjectLink, ArticleHeader, TextBlock } from "../../components";
 import { useScrollToTop } from "../../hooks/useScrollToTop";
 import {
   BookmarkImage,
@@ -9,6 +9,9 @@ import {
 import { PropsWithChildren } from "react";
 import { ContactSection } from "../ContactSection";
 
+const overviewTextBlockClassName =
+  "tracking-tight lg:tracking-normal text-[0.95rem] lg:text-base opacity-80 pt-5 md:pt-[1.65rem] lg:pt-6 pb-6";
+
 function Overview() {
   useScrollToTop();
 
@@ -17,7 +20,7 @@ function Overview() {
       <Section className="mt-2 md:mt-[2.8rem] md:mb-10 lg:mt-0 gap-8">
         <ManageImage />
         <Article title="Manage" className="lg:mx-24 md:pb-[1.6rem] lg:pb-7 md:ml-9 pt-6 md:pt-8 lg:pt-[6.25rem]">
-          <TextBlock className="pr-2 md:pr-0 md:pb-[2.15rem] lg:pb-6">
+          <TextBlock className={`${overviewTextBlockClassName} pr-2 md:pr-0 md:pb-[2.15rem] lg:pb-6`}>
             This project required me to build a fully responsive landing page to
             the designs provided. I used HTML5, along with CSS Grid and
             JavaScript for the areas that required interactivity, such as the
@@ -30,7 +33,7 @@ function Overview() {
       <Section className="mt-[4.5rem] md:mt-20 md:mb-8 lg:mt-20 gap-8 md:flex-row-reverse">
         <BookmarkImage />
         <Article title="Bookmark" className="lg:mx-24 lg:pb-7 md:mr-9 pt-6 md:pt-8 lg:pt-[6.25rem] md:pb-[1.6rem]">
-          <TextBlock className="pr-2 md:pr-0 md:pb-[2.15rem] lg:pb-6">
+          <TextBlock className={`${overviewTextBlockClassName} pr-2 md:pr-0 md:pb-[2.15rem] lg:pb-6`}>
             This project required me to build a fully responsive landing page to
             the designs provided. I used HTML5, along with CSS Grid and
             JavaScript for the areas that required interactivity, such as the
@@ -43,7 +46,7 @@ function Overview() {
       <Section className="mt-[4.5rem] md:mt-20 gap-8">
         <InsureImage />
         <Article title="Insure" className="lg:mx-24 md:pb-[1.6rem] lg:pb-7 md:ml-9 pt-6 md:pt-8 lg:pt-[6.25rem]">
-          <TextBlock className="pr-2 md:pr-0 md:pb-8 lg:pb-6">
+          <TextBlock className={`${overviewTextBlockClassName} pr-2 md:pr-0 md:pb-8 lg:pb-6`}>
             This was a small project which mostly consisted of HTML and CSS. I
             built a fully&#8209;responsive landing page. The only JavaScript
             this project required was to enable the toggling of the mobile
@@ -56,7 +59,7 @@ function Overview() {
       <Section className="mt-[4.5rem] md:mt-[5.2rem] md:mb-8 lg:mt-20 gap-8 md:flex-row-reverse">
         <FyloImage />
         <Article title="Fylo" className="lg:mx-24 lg:pb-7 md:mr-9 pt-6 md:pt-8 lg:pt-[6.25rem] md:pb-[1.6rem]">
-          <TextBlock className="pr-2 md:pr-0 md:pb-[2.15rem] lg:pb-6">
+          <TextBlock className={`${overviewTextBlockClassName} pr-2 md:pr-0 md:pb-[2.15rem] lg:pb-6`}>
             This project was built in pure HTML and CSS. I had mobile and
             desktop designs to work to and built it so that it was
             fully&#8209;responsive. I took a mobile&#8209;first approach and
@@ -72,20 +75,6 @@ function Overview() {
 }
 
 export default Overview;
-
-type TextBlockProps = {
-  className?: string;
-};
-
-function TextBlock({ children, className }: PropsWithChildren<TextBlockProps>) {
-  return (
-    <p
-      className={`font-publicSans tracking-tight lg:tracking-normal text-[0.95rem] lg:text-base opacity-80 leading-[1.875rem] lg:leading-[1.875rem] text-left pt-5 md:pt-[1.65rem] lg:pt-6 pb-6 min-h-[11.75rem] ${className}`}
-    >
-      {children}
-    </p>
-  );
-}
 
 function Article({
   children,
