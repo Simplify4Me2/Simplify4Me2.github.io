@@ -8,6 +8,7 @@ export function ProjectLink({ to, children, className }: PropsWithChildren<{ to:
     `transition-colors duration-300 ease-in-out group ${className}`,
   ].join(" ");
   const isExternal = /^https?:\/\//.test(to);
+  const hasUnsupportedProtocol = /^[a-z][a-z\d+.-]*:/i.test(to) && !isExternal;
 
   if (isExternal) {
     return (
@@ -15,6 +16,10 @@ export function ProjectLink({ to, children, className }: PropsWithChildren<{ to:
         {children}
       </a>
     );
+  }
+
+  if (hasUnsupportedProtocol) {
+    return null;
   }
 
   return (
