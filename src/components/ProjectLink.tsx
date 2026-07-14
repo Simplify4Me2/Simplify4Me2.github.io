@@ -5,7 +5,7 @@ export function ProjectLink({ to, children, className }: PropsWithChildren<{ to:
   const linkClassName = `flex items-center font-publicSans text-xs w-fit tracking-[0.125rem] border-[0.5px] 
         border-solid border-black h-12 px-8 self-start hover:bg-grayish-dark-blue hover:text-white 
         transition-colors duration-300 ease-in-out group ${className}`;
-  const isExternal = to.startsWith("http://") || to.startsWith("https://");
+  const isExternal = /^(?:https?:)?\/\//.test(to);
 
   if (isExternal) {
     return (
