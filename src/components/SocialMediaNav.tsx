@@ -13,13 +13,13 @@ export function SocialMediaNav({ inverted = false, className }: SocialMediaNavPr
     return <nav>
     <ul className={`flex gap-4 lg:items-center ${className}`}>
       <li>
-        <a href="https://github.com/Simplify4Me2"><img src={GitHubIcon} className={iconClass} /></a>
+        <a href="https://github.com/Simplify4Me2" target="_blank" rel="noopener noreferrer"><img src={GitHubIcon} className={iconClass} /></a>
       </li>
       <li>
-        <a href="https://x.com/simon_vereecke"><img src={XIcon} className={iconClass} /></a>
+        <a href="https://x.com/simon_vereecke" target="_blank" rel="noopener noreferrer"><img src={XIcon} className={iconClass} /></a>
       </li>
       <li>
-        <a href="https://www.linkedin.com/in/simon-vereecke-75822497/"><img src={LinkedInIcon} className={iconClass} /></a>
+        <a href="https://www.linkedin.com/in/simon-vereecke-75822497/" target="_blank" rel="noopener noreferrer"><img src={LinkedInIcon} className={iconClass} /></a>
       </li>
     </ul>
   </nav>
