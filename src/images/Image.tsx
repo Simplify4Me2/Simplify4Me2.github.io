@@ -20,7 +20,7 @@ export function Image({
       <img
         src={mobileImage}
         alt={alt}
-        className="w-full h-full object-cover"
+        className="w-full h-auto"
         loading="lazy"
       />
     </picture>
